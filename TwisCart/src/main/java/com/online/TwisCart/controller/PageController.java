@@ -12,26 +12,26 @@ public class PageController {
 	@RequestMapping(value= {"/","/home","/index"})
 	public ModelAndView index() {
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeting","Welcome to spring web MVC");
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
 		return mv;
 	}
 	
-/*	@RequestMapping(value="/test")
-	public ModelAndView test(@RequestParam("greeting") String greet) {
+	@RequestMapping(value= {"/about"})
+	public ModelAndView about() {
 		ModelAndView mv=new ModelAndView("page");
-		mv.addObject("greeting",greet);
+		mv.addObject("title","About Us");
+		mv.addObject("userClickAbout",true);
 		return mv;
 	}
-*/
 	
-	@RequestMapping(value="/test/{greeting}")
-	public ModelAndView test(@PathVariable("greeting") String Greet) {
-	if(Greet==null) {
-		Greet="Please enter some message";
-		
+	@RequestMapping(value= {"/contact"})
+	public ModelAndView contact() {
+		ModelAndView mv=new ModelAndView("page");
+		mv.addObject("title","Contact us");
+		mv.addObject("userClickContact",true);
+		return mv;
 	}
-	ModelAndView mv=new ModelAndView("page");
-	mv.addObject("greetingyou",Greet);
-	return mv;
-}
+	
+
 }
