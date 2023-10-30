@@ -15,8 +15,10 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li id="about"><a href="${pageContext.request.contextPath}/about">About</a></li>
-                <li id="listProducts"><a href="${pageContext.request.contextPath}/listProducts">View Products</a></li>
+                
                 <li id="contact"><a href="${pageContext.request.contextPath}/contact">Contact</a></li>
+                
+                <li id="listProducts"><a href="${pageContext.request.contextPath}/show/all/products">View Products</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

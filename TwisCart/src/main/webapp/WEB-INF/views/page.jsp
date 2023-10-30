@@ -27,7 +27,7 @@
 <link href="${css }/bootstrap.css" rel="stylesheet">
 
 <!-- Bootstrap Readable Theme -->
-<link href="${css }/bootstrap-readable-theme.css" rel="stylesheet">
+<link href="${css }/bootstrap-new-path.css" rel="stylesheet">
 
 
 <!-- Add custom CSS here -->
@@ -59,6 +59,11 @@
 			<!-- Load only when user click contact -->
 			<c:if test="${userClickContact==true }">
 				<%@include file="contact.jsp"%>
+			</c:if>
+
+			<!-- Load only when user click contact -->
+			<c:if test="${userClickAllProducts==true or userClickCategoryProducts==true}">
+				<%@include file="listProduct.jsp"%>
 			</c:if>
 
 		</div>
